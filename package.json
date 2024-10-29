@@ -2,6 +2,12 @@
   "name": "multitenant-next-demo",
   "version": "0.1.0",
   "private": true,
+  "author": {
+    "name": "Vibhakara Acharya",
+    "email": "vi@sagemode.dev",
+    "url": "https://sagemode.dev"
+  },
+  "license": "MIT",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

@@ -34,7 +34,7 @@ Check out the step-by-step tutorial series:
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/multitenant-nextjs.git
+git clone https://github.com/VibhakaraAcharya/multitenant-next-demo
 cd multitenant-nextjs
 ```
 
@@ -144,9 +144,9 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## 📧 Contact
 
-Your Name - [@yourtwitter](https://twitter.com/yourtwitter)
+Vibhakara Acharya - [@SageModeDev](https://x.com/SageModeDev)
 
-Project Link: [https://github.com/yourusername/multitenant-nextjs](https://github.com/yourusername/multitenant-nextjs)
+Project Link: [https://github.com/VibhakaraAcharya/multitenant-next-demo](https://github.com/VibhakaraAcharya/multitenant-next-demo)
 
 ---
 
