@@ -3,30 +3,11 @@ const { MongoClient } = require('mongodb');
 require('dotenv').config({ path: '.env.local' });
 
 const tenants = [
-    {
-        id: 'defaultlocal',
-        name: 'Default App',
-        domain: 'localhost:3000',
-        theme: {
-          primaryColor: '#000000',
-          logo: 'https://placehold.co/100x50/000000/FFFFFF/svg?text=Default',
-          name: 'Default App'
-        }
-      },
-      {
-        id: 'clienta',
-        name: 'Client A Portal',
-        domain: 'clienta.localhost:3000',
-        theme: {
-          primaryColor: '#FF0000',
-          logo: 'https://placehold.co/100x50/FF0000/FFFFFF/svg?text=ClientA',
-          name: 'Client A Portal'
-        }
-      },
+
   {
     id: 'default',
     name: 'Client A',
-    domain: 'investchic.com',
+    domain: 'www.investchic.com',
     theme: {
       primaryColor: '#D4F3B7',
       logo: 'https://placehold.co/100x50/D4F3B7/000000/svg?text=Default',
@@ -36,14 +17,25 @@ const tenants = [
   {
     id: 'vibhakara',
     name: 'VB Portal',
-    domain: 'vibhakara.com',
+    domain: 'app.vibhakara.com',
     theme: {
       primaryColor: '#FF0000',
       logo: 'https://placehold.co/100x50/FF0000/FFFFFF/svg?text=ClientA',
       name: 'Vibhakara'
     }
+  },
+  {
+    id: 'meramaster',
+    name: 'meramaster portal',
+    domain: 'multidemo.meramaster.com',
+    theme: {
+      primaryColor: '#743089',
+      logo: 'https://placehold.co/100x50/743089/FFFFFF/svg?text=ClientA',
+      name: 'Meramaster'
+    }
   }
 ];
+//	#007FFF
 
 async function seedTenants() {
   try {

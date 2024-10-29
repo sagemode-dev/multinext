@@ -1,40 +1,153 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# 🏢 Multi-tenant Next.js Application
 
-## Getting Started
+A production-ready multi-tenant application built with Next.js that serves different content based on the domain name. Perfect for SaaS applications that require white-labeling.
 
-First, run the development server:
+[![Next.js](https://img.shields.io/badge/Next.js-latest-blue.svg)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-latest-blue.svg)](https://www.typescriptlang.org/)
+[![MongoDB](https://img.shields.io/badge/MongoDB-latest-green.svg)](https://www.mongodb.com/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind-latest-blue.svg)](https://tailwindcss.com/)
 
+## 🌟 Features
+
+- 🔐 Domain-based tenant detection
+- 🎨 Dynamic branding per tenant (logos, colors, names)
+- 📦 MongoDB integration for tenant configuration
+- 🚀 Easy deployment to Vercel
+- 📱 Responsive design with Tailwind CSS
+- 🔄 Real-time tenant configuration updates
+
+## 📖 Detailed Tutorial
+
+Check out the step-by-step tutorial series:
+- [Part 1: Building a Multi-tenant Next.js Application](your-blog-url-1)
+- [Part 2: Deploying to Vercel](your-blog-url-2)
+
+## 🚀 Quick Start
+
+### Prerequisites
+
+- Node.js 18+ 
+- MongoDB Atlas account
+- Vercel account (for deployment)
+
+### Installation
+
+1. Clone the repository:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/yourusername/multitenant-nextjs.git
+cd multitenant-nextjs
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
+```bash
+npm install
+```
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+3. Set up environment variables:
+```bash
+cp .env.example .env.local
+```
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+Update `.env.local` with your MongoDB connection string:
+```env
+MONGODB_URI=your_mongodb_uri
+MONGODB_DB=multitenant-demo
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+4. Seed the database:
+```bash
+npm run seed
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+5. Start the development server:
+```bash
+npm run dev
+```
 
-## Learn More
+### Local Testing
 
-To learn more about Next.js, take a look at the following resources:
+Add to your hosts file:
+```bash
+127.0.0.1 localhost
+127.0.0.1 clienta.localhost
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+Visit:
+- http://localhost:3000 (default tenant)
+- http://clienta.localhost:3000 (client tenant)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🏗️ Project Structure
 
-## Deploy on Vercel
+```
+├── public/
+│   └── logos/            # Tenant logos
+├── src/
+│   ├── components/       # React components
+│   ├── hooks/           # Custom hooks
+│   ├── lib/             # Utilities
+│   ├── pages/           # Next.js pages
+│   └── types/           # TypeScript types
+├── scripts/             # Database scripts
+└── package.json
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📝 Environment Variables
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+```env
+MONGODB_URI=            # MongoDB connection string
+MONGODB_DB=             # Database name
+```
+
+## 🔧 Configuration
+
+### Tenant Configuration Example
+
+```typescript
+{
+  id: 'default',
+  name: 'Default App',
+  domain: 'localhost:3000',
+  theme: {
+    primaryColor: '#000000',
+    logo: '/logos/default-logo.svg',
+    name: 'Default App'
+  }
+}
+```
+
+## 🚀 Deployment
+
+Detailed deployment instructions available in [Part 2 of the tutorial](your-blog-url-2).
+
+Quick deploy to Vercel:
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/yourusername/multitenant-nextjs)
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+
+## 👏 Acknowledgments
+
+- [Next.js Documentation](https://nextjs.org/docs)
+- [MongoDB Documentation](https://docs.mongodb.com/)
+- [Vercel Platform](https://vercel.com)
+- [Tailwind CSS](https://tailwindcss.com)
+
+## 📧 Contact
+
+Your Name - [@yourtwitter](https://twitter.com/yourtwitter)
+
+Project Link: [https://github.com/yourusername/multitenant-nextjs](https://github.com/yourusername/multitenant-nextjs)
+
+---
+
+⭐️ If this project helped you, don't forget to give it a star!
