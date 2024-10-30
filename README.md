@@ -19,14 +19,14 @@ A production-ready multi-tenant application built with Next.js that serves diffe
 ## 📖 Detailed Tutorial
 
 Check out the step-by-step tutorial series:
-- [Part 1: Building a Multi-tenant Next.js Application](your-blog-url-1)
-- [Part 2: Deploying to Vercel](your-blog-url-2)
+- [Part 1: Building a Multi-tenant Next.js Application](your-blog-url-1) - coming soon
+- [Part 2: Deploying to Vercel](your-blog-url-2) - coming soon
 
 ## 🚀 Quick Start
 
 ### Prerequisites
 
-- Node.js 18+ 
+- Node.js 20+ 
 - MongoDB Atlas account
 - Vercel account (for deployment)
 
@@ -34,8 +34,8 @@ Check out the step-by-step tutorial series:
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/VibhakaraAcharya/multitenant-next-demo
-cd multitenant-nextjs
+git clone https://github.com/sagemode-dev/multinext.git
+cd multinext
 ```
 
 2. Install dependencies:
@@ -117,7 +117,7 @@ MONGODB_DB=             # Database name
 
 ## 🚀 Deployment
 
-Detailed deployment instructions available in [Part 2 of the tutorial](your-blog-url-2).
+Detailed deployment instructions available in [Part 2 of the tutorial](your-blog-url-2). - coming soon
 
 Quick deploy to Vercel:
 
@@ -145,8 +145,6 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 ## 📧 Contact
 
 Vibhakara Acharya - [@SageModeDev](https://x.com/SageModeDev)
-
-Project Link: [https://github.com/VibhakaraAcharya/multitenant-next-demo](https://github.com/VibhakaraAcharya/multitenant-next-demo)
 
 ---
 
