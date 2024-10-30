@@ -4,34 +4,38 @@ require('dotenv').config({ path: '.env.local' });
 
 const tenants = [
 
+  /** Replace this with actual domain data in production
+   * 
+   * To test locally, you'll need to modify your hosts file:
+   * ----------------------------------------------------------
+   * On Windows: C:\Windows\System32\drivers\etc\hosts
+   * On Mac/Linux: /etc/hosts
+   * 
+   * Add these lines:
+   * ---------------------------------
+   * 127.0.0.1	localhost
+   * 127.0.0.1	clienta.localhost
+   * ---------------------------------
+   */
+
   {
     id: 'default',
-    name: 'Client A',
-    domain: 'www.investchic.com',
+    name: 'Default App',
+    domain: 'localhost:3000',       // loads @ localhost:3000
     theme: {
-      primaryColor: '#D4F3B7',
-      logo: 'https://placehold.co/100x50/D4F3B7/000000/svg?text=Default',
-      name: 'Client A'
+      primaryColor: '#000000',
+      logo: 'https://placehold.co/100x50/D4F3B7/000000/svg?text=Default',  
+      name: 'Default App'
     }
   },
   {
-    id: 'vibhakara',
-    name: 'VB Portal',
-    domain: 'app.vibhakara.com',
+    id: 'clienta',
+    name: 'Client A Portal',
+    domain: 'clienta.localhost:3000', // loads @ clienta.localhost:3000
     theme: {
       primaryColor: '#FF0000',
-      logo: 'https://placehold.co/100x50/FF0000/FFFFFF/svg?text=ClientA',
-      name: 'Vibhakara'
-    }
-  },
-  {
-    id: 'meramaster',
-    name: 'meramaster portal',
-    domain: 'multidemo.meramaster.com',
-    theme: {
-      primaryColor: '#743089',
-      logo: 'https://placehold.co/100x50/743089/FFFFFF/svg?text=ClientA',
-      name: 'Meramaster'
+      logo: 'https://placehold.co/100x50/FF0000/000000/svg?text=ClientA',  // Changed to PNG
+      name: 'Client A Portal'
     }
   }
 ];
